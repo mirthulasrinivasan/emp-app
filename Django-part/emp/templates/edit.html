@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Employee</title>
+</head>
+<body>
+    <h2>Edit Employee Detail</h2>
+
+    <form method="post">
+        {% csrf_token %}
+         <label>Name:</label><br>
+        <input type="text" name="emp_name" value="{{ detail.empid.emp_name }}"><br><br>
+
+        <label>Phone Number:</label><br>
+        <input type="number" name="emp_num" value="{{ detail.emp_num }}"><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="emp_email" value="{{ detail.emp_email }}"><br><br>
+
+        <label>Address:</label><br>
+        <textarea name="emp_add">{{ detail.emp_add }}</textarea><br><br>
+
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

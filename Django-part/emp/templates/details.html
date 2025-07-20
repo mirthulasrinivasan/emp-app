@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Added</title>
+</head>
+<body>
+    <h2>Employee Added Successfully!</h2>
+
+    <table>
+        <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Phone number</th>
+            <th> email</th>
+            <th> Address</th>
+        </tr>
+        {% for detail in details%}
+        <tr>
+            <td>{{detail.empid.emp_id}}</td>
+            <td>{{detail.empid.emp_name}}</td>
+            <td>{{detail.emp_num}}</td>
+            <td>{{detail.emp_email}}</td>
+            <td>{{detail.emp_add}}</td>
+            <td>
+                <a href="{% url 'delete_employee' detail.id %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}    
+    </table>
+    <a href="{% url 'details' %}">
+    <button> ADD </button> 
+    </a>
+</body>
+</html>

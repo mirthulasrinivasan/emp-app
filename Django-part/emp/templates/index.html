@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Employee</title>
+</head>
+<body>
+    <h2>Add Employee Details</h2>
+    <form method="post">
+        {% csrf_token %}
+        
+        <label>Name:</label><br>
+        <input type="text" name="emp_name" required><br><br>
+
+        <label>Employee ID:</label><br>
+        <input type="text" name="emp_id" required><br><br>
+
+        <label>Employee Number:</label><br>
+        <input type="text" name="emp_num" required><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="emp_email" required><br><br>
+
+        <label>Address:</label><br>
+        <textarea name="emp_add" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
